@@ -1,0 +1,175 @@
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 0;
+  margin: 0;
+  background-color: #f8f9fa; /* Set a neutral background color for the whole page */
+  color: #ffffff; /* Apply a consistent text color across the entire page */
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  height: 100vh; /* Full height of the viewport */
+}
+
+.sidebar {
+  background-color: #2c2f33;
+  padding: 20px;
+  color: inherit; /* Inherit the global text color */
+  flex-shrink: 0;
+  width: 220px;
+  min-height: 100vh; /* Ensures sidebar takes up the full height */
+  position: fixed; /* Keep the sidebar fixed while scrolling */
+  top: 0;
+  left: 0;
+}
+
+.sidebar .logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  color: inherit;
+  cursor: pointer; /* Makes it clear that this is clickable */
+}
+
+.sidebar .logo:hover {
+  color: #007bff; /* Changes color on hover for better UX */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  position: relative;
+  color: inherit; /* Inherit the global text color */
+}
+
+.sidebar ul li a {
+  color: inherit; /* Inherit the global text color */
+  text-decoration: none;
+  display: block;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.sidebar ul li .dropdown-content a {
+  color: inherit; /* Inherit the global text color */
+  padding: 10px 0;
+  text-decoration: none;
+  display: block;
+}
+
+.main-content {
+  margin-left: 240px; /* Make space for the fixed sidebar */
+  width: calc(100% - 240px); /* Adjust the width according to the sidebar width */
+  background-image: url(fctc-web-design.gif); /* Path to the image in the public folder */
+  background-size: cover; /* Make sure the image covers the entire background */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+  padding: 20px; /* Add padding around the content */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align content to the left */
+  overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.header {
+  display: flex;
+  justify-content: center; /* Center the header horizontally */
+  align-items: center;
+  background-color: #007bff; /* Blue background */
+  padding: 15px 30px; /* Add some padding */
+  border-radius: 8px;
+  color: #ffffff;
+  width: 70%; /* Set the header to a wider width */
+  max-width: 900px; /* Ensure the header does not get too wide */
+  margin: 0 auto 80px auto; /* Center the header and add more margin below */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  position: relative; /* Ensure the header scrolls with the page */
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusts based on screen size */
+  gap: 10px; /* Add a larger gap between cards */
+  width: 100%;
+  max-width: 1200px; /* Set a max-width to limit how wide the dashboard can stretch */
+  justify-items: flex-start; /* Align grid items to the left */
+  padding: 20px; /* Add padding to create space around the content */
+  box-sizing: border-box; /* Include padding in the width and height calculations */
+  margin-top: 100px; /* Add a larger gap between the header and the first row of black boxes */
+}
+
+.card {
+  background-color: #FF6347; /* Tomato background color */
+  color: inherit; /* Inherit the global text color */
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s;
+  cursor: pointer;
+  width: 100%; /* Make sure the card takes up the full width of its grid cell */
+  max-width: 250px; /* Set a maximum width for the cards */
+  box-shadow: 0 4px 8px rgba(255, 99, 71, 0.2); /* Shadow color to match the box */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: inherit; /* Inherit the global text color */
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: inherit; /* Inherit the global text color */
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.button-container a {
+  color: inherit; /* Inherit the global text color */
+  background-color: #3c8dbc;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.button-container a:hover {
+  background-color: #2c6cb0;
+}
+
+.dashboard-button {
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  width: 100%;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 1px;
+  transition: background-color 0.3s;
+}
+
+.dashboard-button:hover {
+  background-color: #0056b3;
+}
